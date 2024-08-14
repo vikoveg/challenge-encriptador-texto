@@ -1,3 +1,151 @@
-body{
-    background-color:#F3F5FC ;
+
+:root{
+    --colorfondo: #FFF5F8;
+    --colorfondosecundario: #FFFFFF;
+    --colorprincipal: #bf3869;
+    --colorsecundario: #F8BBD0;
+    --colorbordes:#c9abb6;
+    --fuente: "Montserrat", sans-serif;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--fuente);
+    height: 100vh;
+    background-color: var(--colorfondo);
+}
+
+.container{
+    position: relative;
+    padding: 2%;
+    height: 70%;
+    display: flex;
+    gap:80px
+}
+
+.container_usuario{
+    border-radius: 32px;
+    padding: 2%;
+    width: 70vw;
+    background-color: var(--colorfondosecundario);
+    justify-content: center;
+    box-shadow: 0px 0px 0px 10px #c9abb6;
+}
+
+.requisitos{
+    margin-left: 5%;
+    color:gray;
+}
+
+.texto_usuario{
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 50vw;
+    height: 40vh;
+    border: none;
+    resize:none;
+    outline: none;
+    font-family: var(--fuente);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.container_botones{
+    padding-top: 5%;
+    display: flex;
+    gap:24px;
+    justify-content: center;
+    font-weight: 400;
+
+}
+
+.boton_encriptar{
+    font-size: 16px;
+    border-radius: 24px;
+    border: 1px solid var(--colorprincipal);
+    padding: 2%;
+    background-color: var(--colorprincipal);
+    color: var(--colorfondosecundario);
+    width: 25vw;
+
+}
+
+.boton_desencriptar{
+    font-size: 16px;
+    border-radius: 24px;
+    border: 1px solid var(--colorprincipal);
+    padding: 2%;
+    background-color: var(--colorsecundario);
+    color: var(--colorprincipal);
+    width: 25vw;
+
+}
+
+.container_mensaje{
+    width: 50vw;
+    padding: 5%;
+    border-radius: 32px;
+    background-color: var(--colorfondosecundario);
+    align-content: center;
+    box-shadow: 0px 0px 0px 10px #c9abb6;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+}
+
+
+.container_logo{
+    padding: 1%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #bf3869;
+    text-align: center;
+    padding: 1%;
+  }
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container_usuario {
+      width: 60%;
+      height: 60%;
+    }
+    .texto_usuario {
+      width: 80%;
+      height: 60%;
+      left: 10%;
+      top: 5%;
+    }
+    .requisitos {
+      width: 80%;
+      left: 10%;
+      top: 67%;
+    }
+    .requisitos p {
+      font-size: 16px;
+    }
+    .container_mensaje {
+        width: 60%;
+        height: 60%;
+        overflow-wrap: break-word;
+        overflow-y: scroll;
+    }
+    .resultado_mensaje {
+      width: 100%;
+      top: 5%;
+    }
+    .container_mensaje img {
+      display: none;
+    }
+  }
