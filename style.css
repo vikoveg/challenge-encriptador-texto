@@ -102,12 +102,21 @@ body{
 }
 
 .footer {
+     color: var(--colorfondosecundario);
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #bf3869;
     text-align: center;
     padding: 1%;
+  }
+
+  .footer a{
+    color: var(--colorfondosecundario);
+  }
+
+  .footer a:hover{
+    color: var(--colorbordes);
   }
 
 /* Responsive design */
